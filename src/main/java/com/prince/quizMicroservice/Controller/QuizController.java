@@ -27,7 +27,7 @@ public class QuizController {
 //        System.out.println("rached at controller layer");
         return quizService.createQuiz(quizDto.getCategory(), quizDto.getNumQ(), quizDto.getTitle());
     }
-
+//below api gives quiz and questions by id
     @GetMapping("get/{id}")
     public ResponseEntity<List<QuestionWrapper>> getQuizQuestions(@PathVariable Integer id){
         return quizService.getQuizQuestions(id);
